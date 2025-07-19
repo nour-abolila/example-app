@@ -38,6 +38,10 @@
                     <p class="product-price"> {{$item -> price}}$ </p>
                     <p class="product-price"><span>Quantity </span> {{$item -> quantity}} </p>
                     <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                    <form action="{{ route('product.delete', $item->id) }}" method="GET" style="display:inline;">
+                        @csrf
+                        <button type="submit" class="cart-btn"><i class="fas fa-trash"></i> Delete</button>
+                    </form>
                 </div>
             </div>
             @endforeach

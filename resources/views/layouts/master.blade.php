@@ -72,8 +72,9 @@
 								</li>
 								<li><a href="/product">المنتجات</a></li>
 								<li><a href="/category">الاقسام</a></li>
-								<li><a href="/">من نحن</a></li>
-								<li><a href="#">الصفحات</a>
+								<li><a href="/addproduct">اضافة منتج</a></li>
+								<li><a href="review">اراء العملاء</a></li>
+								{{-- <li><a href="#">الصفحات</a>
 									<ul class="sub-menu">
 										<li><a href="404.html">404 page</a></li>
 										<li><a href="about.html">About</a></li>
@@ -83,7 +84,7 @@
 										<li><a href="news.html">News</a></li>
 										<li><a href="shop.html">Shop</a></li>
 									</ul>
-								</li>
+								</li> --}}
 								{{-- <li><a href="news.html">News</a>
 									<ul class="sub-menu">
 										<li><a href="news.html">News</a></li>
@@ -125,9 +126,12 @@
 					<span class="close-btn"><i class="fas fa-window-close"></i></span>
 					<div class="search-bar">
 						<div class="search-bar-tablecell">
-							<h3>Search For:</h3>
-							<input type="text" placeholder="Keywords">
-							<button type="submit">Search <i class="fas fa-search"></i></button>
+							<form action="/search" method="post">
+								@csrf
+							<h3>ابحث</h3>
+							<input type="text" name="searchkey" placeholder="ابحث فى المنتجات ">
+							<button type="submit">البحث <i class="fas fa-search"></i></button>
+							</form>
 						</div>
 					</div>
 				</div>
